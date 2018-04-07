@@ -1,0 +1,4 @@
+rootProject.name = 'blogpost'
+include 'pluginDev1'
+findProject(':pluginDev1')?.name = 'blogpost'
+
