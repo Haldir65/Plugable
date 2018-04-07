@@ -50,8 +50,8 @@ android:
 before_script: cd androidProjects
 
 before_install:
- - chmod +x gradlew
+ - chmod +x ./androidProjects/gradlew
 
 
 script:
-- "./gradlew clean wordsToEnumDebug --stacktrace"
+- "./androidProjects/gradlew clean wordsToEnumDebug --stacktrace"

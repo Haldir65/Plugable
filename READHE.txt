@@ -1,1 +1,3 @@
 http://blog.csdn.net/u010687392/article/details/47121729
+
+[create a stand alone gradle plugin for android](https://afterecho.uk/blog/create-a-standalone-gradle-plugin-for-android-part-4-the-transform-api.html)

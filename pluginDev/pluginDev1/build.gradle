@@ -16,6 +16,7 @@ dependencies {
     compile localGroovy()
     compile 'org.codehaus.groovy:groovy-all:2.4.12'
     compile 'com.squareup:javapoet:1.5.1'
+    compile 'com.android.tools.build:gradle:2.3.0'
 }
 
 apply plugin: 'maven'

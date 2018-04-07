@@ -38,7 +38,7 @@ class WordsToEnumTask extends DefaultTask{
 
 //        outDir.deleteDir()
 
-        TypeSpec.Builder wordsEnumBuilder = enumBuilder(enumClassName ).addModifiers(Modifier.PUBLIC)
+        Builder wordsEnumBuilder = enumBuilder(enumClassName ).addModifiers(Modifier.PUBLIC)
         wordsFile.readLines().each {
             wordsEnumBuilder.addEnumConstant(it).build()
         }

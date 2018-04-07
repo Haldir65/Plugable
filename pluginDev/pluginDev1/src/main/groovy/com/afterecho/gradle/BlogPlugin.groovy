@@ -3,6 +3,7 @@ package com.afterecho.gradle
 import com.afterecho.gradle.extensions.BlogPluginExtension
 import com.afterecho.gradle.task.ShowDevicesTask
 import com.afterecho.gradle.task.WordsToEnumTask
+import com.afterecho.gradle.transform.BlogTransform
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 
@@ -20,19 +21,22 @@ class BlogPlugin implements Plugin<Project> {
 //        showDevicesTask.group = "blogplugin"
 //        showDevicesTask.description = "Runs adb devices command"
         target.extensions.create('bpplugin', BlogPluginExtension)
-        target.android.applicationVariants.all { variant ->
-            File inputWordFile = new File(target.projectDir, target.extensions.bpplugin.words)
-            File outputDir = new File(target.buildDir, "generated/source/wordsToEnum/${variant.dirName}")
-            def task = target.tasks.create(name: "wordsToEnum${variant.name.capitalize()}", type: WordsToEnumTask){
-                outDir = outputDir
-                wordsFile = inputWordFile
-                enumClassName = target.extensions.bpplugin.enumClass
-                outputPackageName = target.extensions.bpplugin.outputPackage
+        target.afterEvaluate {
+            target.android.applicationVariants.all { variant ->
+                File inputWordFile = new File(target.projectDir, target.extensions.bpplugin.words)
+                File outputDir = new File(target.buildDir, "generated/source/wordsToEnum/${variant.dirName}")
+                def task = target.tasks.create(name: "wordsToEnum${variant.name.capitalize()}", type: WordsToEnumTask){
+                    outDir = outputDir
+                    wordsFile = inputWordFile
+                    enumClassName = target.extensions.bpplugin.enumClass
+                    outputPackageName = target.extensions.bpplugin.outputPackage
+                }
+                variant.registerJavaGeneratingTask task, outputDir
             }
-            variant.registerJavaGeneratingTask task, outputDir
         }
-
-
+        target.android.registerTransform(new BlogTransform())
+        // Don't put this in the target.afterEvaulate closure. The transform is called for each variant automatically,
+        // so there's no need to register a transform per variant.
     }
 }
 
