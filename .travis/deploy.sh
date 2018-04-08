@@ -9,4 +9,8 @@ cd ./androidProjects
 
 ls -al 
 
-./gradlew clean assembleDebug --stacktrace --daemon
+which gradle
+
+./gradlew wordsToEnumDebug
+
+# ./gradlew clean assembleDebug --stacktrace --daemon

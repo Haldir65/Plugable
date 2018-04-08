@@ -40,6 +40,43 @@ android {
         }
     }
 
+
+
+
+
+
+
+//    applicationVariants.all { variant->
+//
+//
+//
+//        def dexTask = project.tasks.findByName("transformClassesWithDexBuilderForDebug")
+//        def preDexTask = project.tasks.findByName("transformClassesWithPreDexForRelease")
+//        project.logger.error "${variant.name}"
+//        if(preDexTask) {
+//            project.logger.error "======preDexTask======"
+//            preDexTask.inputs.files.files.each {file ->
+//                project.logger.error "preDexTask inputs =$file.absolutePath"
+//            }
+//
+//            preDexTask.outputs.files.files.each {file ->
+//                project.logger.error "preDexTask outputs =$file.absolutePath"
+//                // \app\build\intermediates\transforms\preDex\release 这里只有一个输出目录
+//            }
+//        }
+//        if(dexTask) {
+//            project.logger.error "======dexTask======"
+//            dexTask.inputs.files.files.each {file ->
+//                project.logger.error "dexTask inputs =$file.absolutePath"
+//            }
+//
+//            dexTask.outputs.files.files.each {file ->
+//                project.logger.error "dexTask outputs =$file.absolutePath"
+//                // \app\build\intermediates\transforms\dexBuilder\debug 这里只有一个输出目录
+//            }
+//        }
+//    }
+
 }
 //android.applicationVariants.all {  v ->
 //    if (v.buildType.name != "release"){
