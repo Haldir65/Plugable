@@ -51,7 +51,8 @@ before_script: cd androidProjects
 
 before_install:
  - chmod +x ./androidProjects/gradlew
+ - chmod +x .travis/deploy.sh
 
 
 script:
-- "./androidProjects/gradlew clean wordsToEnumDebug --stacktrace"
+- .travis/deploy.sh

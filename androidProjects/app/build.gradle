@@ -11,6 +11,28 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
+    sourceSets {
+
+        release {
+            java.srcDirs = ['src/main/java','src/release']  // 使用release对应的代码
+            resources.srcDirs = ['src/main/res']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+        }
+
+        debug {
+            java.srcDirs = ['src/main/java','src/debug']  // 使用debug对应的代码
+            resources.srcDirs = ['src/main/res']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -19,19 +41,40 @@ android {
     }
 
 }
+//android.applicationVariants.all {  v ->
+//    if (v.buildType.name != "release"){
+//        v.assemble.doLast {
+//            logger.lifecycle("we have successfully built $v.name and can post a messaage to remote server")
+//        }
+//    }
+//}
 
-bpplugin {
-    words "plugin_words.txt"
-    enumClass "WordsMagic"
-    outputPackage "com.afterecho.android.utility"
-}
+//gradle.taskGraph.whenReady {taskGraph ->
+//    if (taskGraph.hasTask(assembleRelease)) {
+////        println("has assembleRelease")
+////        version = '1.0'
+//    } else {
+//
+////        version = '1.0-SNAPSHOT'
+//    }
+//}
+
+
+        bpplugin {
+            words "plugin_words.txt"
+            enumClass "WordsMagic"
+            outputPackage "com.afterecho.android.utility"
+        }
+
+
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     implementation 'com.android.support:design:26.1.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    implementation files('libs/okio-1.14.0.jar')
 }

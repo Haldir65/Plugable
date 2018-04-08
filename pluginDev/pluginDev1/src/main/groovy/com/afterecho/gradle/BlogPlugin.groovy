@@ -34,7 +34,7 @@ class BlogPlugin implements Plugin<Project> {
                 variant.registerJavaGeneratingTask task, outputDir
             }
         }
-        target.android.registerTransform(new BlogTransform())
+        target.android.registerTransform(new BlogTransform(target))
         // Don't put this in the target.afterEvaulate closure. The transform is called for each variant automatically,
         // so there's no need to register a transform per variant.
     }

@@ -17,6 +17,7 @@ dependencies {
     compile 'org.codehaus.groovy:groovy-all:2.4.12'
     compile 'com.squareup:javapoet:1.5.1'
     compile 'com.android.tools.build:gradle:2.3.0'
+    compile 'org.javassist:javassist:3.20.0-GA'
 }
 
 apply plugin: 'maven'
