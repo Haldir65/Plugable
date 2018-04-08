@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f180a70b-92df-472a-974f-5ca9efca7346" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pluginDev1/src/main/groovy/com/afterecho/gradle/util/MyInject.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/pluginDev1/src/main/groovy/com/afterecho/gradle/util/MyInject.groovy" afterDir="false" />
-    </list>
+    <list default="true" id="f180a70b-92df-472a-974f-5ca9efca7346" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -66,8 +63,8 @@
       <file leaf-file-name="MyInject.groovy" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pluginDev1/src/main/groovy/com/afterecho/gradle/util/MyInject.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="48" selection-start-line="48" selection-end-line="48" />
+            <state relative-caret-position="440">
+              <caret line="128" column="76" selection-start-line="128" selection-start-column="70" selection-end-line="128" selection-end-column="76" />
               <folding>
                 <element signature="e#35#61#0" expanded="true" />
               </folding>
@@ -900,6 +897,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -908,7 +906,7 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.36746144" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.36746144" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.22019635" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32850242" />
       <window_info id="Capture Tool" order="2" />
@@ -1114,8 +1112,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pluginDev1/src/main/groovy/com/afterecho/gradle/util/MyInject.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        <state relative-caret-position="440">
+          <caret line="128" column="76" selection-start-line="128" selection-start-column="70" selection-end-line="128" selection-end-column="76" />
           <folding>
             <element signature="e#35#61#0" expanded="true" />
           </folding>

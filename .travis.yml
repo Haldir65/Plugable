@@ -47,7 +47,7 @@ android:
 #    - sys-img-armeabi-v7a-android-19
 
 ## this is how we change directories in travis
-before_script: cd androidProjects
+# before_script: cd androidProjects
 
 before_install:
  - chmod +x ./androidProjects/gradlew
